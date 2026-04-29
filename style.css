@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    text-transform: capitalize;
+}
+body{
+background: linear-gradient(
+rgba(0,0,0,0.75),
+rgba(20,20,20,0.80)
+),
+url(WhatsApp\ Image\ 2026-04-26\ at\ 10.49.23\ PM.jpeg);
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+flex-direction: column;
+}
+.main{
+    flex: 1;
+    margin-top: 155px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.light-mode nav {
+    background: rgba(255, 255, 255, 0.395);
+    backdrop-filter: blur(10px);
+}
+
+.light-mode .theme {
+    color: black;
+}
+
+.light-mode .theme:hover {
+    color: goldenrod;
+}
+
+/* underline */
+.light-mode .theme::after {
+    background: goldenrod;
+}
+
+/* footer */
+.light-mode footer {
+    background: #ffffff;
+    color: black;
+}
+.light-mode footer {
+    background: rgba(255, 255, 255, 0.395);
+    backdrop-filter: blur(10px);
+    color: black;
+}
+.light-mode .container {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    color: black;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.light-mode .container a {
+    color: goldenrod;
+}
+nav{
+background: linear-gradient(rgba(0, 0, 0, 0.508));
+padding: 20px;
+
+}
+ul{
+display: flex;
+justify-content: center;
+gap: 40px;
+}
+li{
+list-style: none;
+}
+.theme{
+font-size: 25px;
+font-weight: bold;
+color: white;
+position: relative;
+font-family: "Shojumaru", system-ui;
+text-decoration: none;
+display: inline-block;
+transition: transform 0.3s ease,color 0.3s ease;
+}
+.theme::after{
+width: 0px;
+height: 2px;
+left: 0;
+bottom:-5px;
+position: absolute;
+content: "";
+transition: 0.4s;
+background: gold;
+}
+.theme:hover::after{
+width: 100%;
+}
+.theme:hover{
+color: gold;
+transform: scale(1.2) translateX(-5px) ;
+text-shadow: 0 0 10px gold;    
+}
+#theme-toggle{
+    padding: 8px 15px;
+    background-color: gold;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: transform 0.3s ease,color 0.3s ease;
+}
+#theme-toggle:hover{
+    transform: scale(1.2);
+}
+/* Main card */
+.container {
+    width: 360px;
+    padding: 25px;
+    margin: 20px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 15px;
+    text-align: center;
+    color: #FFD700;
+    box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+
+
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Password box */
+.password-box {
+    position: relative;
+}
+
+.password-box span {
+    position: absolute;
+    right: 25px;
+    top: 12px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Button */
+button {
+    width: 95%;
+    padding: 10px;
+    background: #FFD700;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e6c200;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Fade animation */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); } 
+}
+footer{
+font-weight: bold;
+color: white;
+font-size: 20px;
+background:linear-gradient(rgba(0, 0, 0, 0.508));
+padding: 20px;
+text-align: center;    
+margin-top: -15px;
+}

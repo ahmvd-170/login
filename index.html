@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Ancient Egypt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shojumaru&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="navbar">
+        <nav>
+        <ul>
+            <li><a class="theme" href="https://ahmvd-170.github.io/Home/">Home</a></li>
+            <li><a class="theme" href="#">Login</a></li>
+            <li><a class="theme" href="https://adelhassan-sys.github.io/Adel/">Sign Up</a></li>
+            <li><a class="theme" href="https://ahmed-essam-abdelhamid.github.io/Museums/">Museums</a></li>
+            <li><a class="theme" href="#">Search</a></li>
+            <li><a class="theme" href="https://ziadfaisal06-cmd.github.io/GALLERY/">Gallery</a></li>
+            <li><a class="theme" href="https://omaryoussri.github.io/EgyptianMuseums/">tickets</a></li>
+            <li><a class="theme" href="https://omardezny1234-eng.github.io/Contact-USs/">Contact Us</a></li>
+            <li><button id="theme-toggle">light Mode</button></li>
+            </ul>
+        </nav>
+    </div>
+<div class="main">
+    <div class="container fade-in">
+    <h1 class="title"> Login</h1>
+
+    <form id="loginForm">
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <span onclick="togglePassword('password')"></span>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>No account? <a href="https://adelhassan-sys.github.io/Adel/">Register</a></p>
+</div>
+</div>
+
+<script>
+// Login check
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if(user){
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        alert("Welcome " + user.name + " 🏺");
+        window.location.href = "home.html";
+    } else {
+        alert("Wrong email or password!");
+    }
+});
+
+// Toggle password
+function togglePassword(id){
+    const input = document.getElementById(id);
+    input.type = input.type === "password" ? "text" : "password";
+}
+</script>
+<script>
+                const btn = document.getElementById("theme-toggle");
+
+                btn.onclick = function () {
+                    document.body.classList.toggle("light-mode");
+
+                    if (document.body.classList.contains("light-mode")) {
+                        btn.textContent = "Dark Mode";
+                    } else {
+                        btn.textContent = "Light Mode";
+                    }
+                };
+            </script>
+<footer class="footer">
+            <p>© 2026 All Rights Reserved</p>
+            <p>This website was designed and developed by Omar Ibrahim , Ziad Fiasal , Adel Hassan , Ahmed Mohamed , Omar Youssry , Ahmed Essam , Mohamed Emad , Mahmoud Ayman</p>
+    </footer>
+</body>
+</html>
