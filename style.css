@@ -163,7 +163,7 @@ input {
 }
 
 /* Button */
-button {
+.form-btn {
     width: 95%;
     padding: 10px;
     background: #FFD700;
