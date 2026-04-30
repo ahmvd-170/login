@@ -116,6 +116,7 @@ text-shadow: 0 0 10px gold;
   font-size: 18px;
     font-family: "Shojumaru", system-ui;
     transition: transform 0.3s ease,color 0.3s ease;
+    margin-lift:auto;
 }
 #theme-toggle:hover{
     transform: scale(1.1);
