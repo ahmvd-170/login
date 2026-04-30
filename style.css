@@ -24,41 +24,41 @@ flex-direction: column;
     align-items: center;
     padding: 40px 20px;
 }
-.light-mode nav {
+html.light-mode nav {
     background: rgba(255, 255, 255, 0.395);
     backdrop-filter: blur(10px);
 }
 
-.light-mode .theme {
+html.light-mode .theme {
     color: black;
 }
 
-.light-mode .theme:hover {
+html.light-mode .theme:hover {
     color: goldenrod;
 }
 
 /* underline */
-.light-mode .theme::after {
+html.light-mode .theme::after {
     background: goldenrod;
 }
 
 /* footer */
-.light-mode footer {
+html.light-mode footer {
     background: #ffffff;
     color: black;
 }
-.light-mode footer {
+html.light-mode footer {
     background: rgba(255, 255, 255, 0.395);
     backdrop-filter: blur(10px);
     color: black;
 }
-.light-mode .container {
+html.light-mode .container {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     color: black;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
-.light-mode .container a {
+html.light-mode .container a {
     color: goldenrod;
 }
 nav{
@@ -103,16 +103,20 @@ transform: scale(1.2) translateX(-5px) ;
 text-shadow: 0 0 10px gold;    
 }
 #theme-toggle{
-    padding: 8px 15px;
-    background-color: gold;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 10px;
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 18px;
+    font-family: "Shojumaru", system-ui;
     transition: transform 0.3s ease,color 0.3s ease;
 }
 #theme-toggle:hover{
-    transform: scale(1.2);
+     transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(255, 217, 0, 0.638),
+0px 0px 20px rgba(255, 217, 0, 0.779),
+0px 0px 30px gold; 
 }
 /* Main card */
 .container {
